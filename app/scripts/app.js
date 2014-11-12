@@ -38,7 +38,6 @@ angular
         templateUrl: 'views/validatecampaign.html',
         controller: 'campaignsCtrl'
       })
-      })
       .otherwise({
         redirectTo: '/'
       });
