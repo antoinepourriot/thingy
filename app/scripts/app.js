@@ -30,7 +30,7 @@ angular
         templateUrl: 'views/trendanalysis.html',
         controller: 'trendanalysisCtrl'
       })
-      .when('#/campaigns', {
+      .when('/campaigns', {
         templateUrl: 'views/campaigns.html',
         controller: 'campaignsCtrl'
       })

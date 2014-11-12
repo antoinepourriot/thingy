@@ -1,1 +1,22 @@
 <div>Campaigns!!!!</div>
+
+ <table class="table table-striped table-hover ">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Id</th>
+                                        <th>Campaign name</th>
+                                        <th>Days Ago</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+								    <tbody ng:repeat="i in activecampaigns">
+								        <tr>
+								            <td>{{$index}}</td>
+								            <td>{{i.Id}}</td>
+								            <td>{{i.Name}}</td>
+								            <td>{{i.DaysAgo}}</td>
+								        </tr>
+								    </tbody>
+                                </tbody>
+                            </table>

@@ -25,18 +25,19 @@ search pattern in sublime:
 <open folders>, -bower_components/*, -node_modules/*,
 ```
   
-  api/campaigns/{id}/accept
-  api/campaigns/{id}/complete
-  api/campaigns/count
-  api/campaigns 
-  api/campaigns?count=25
+api/campaigns/{id}/accept
+api/campaigns/{id}/complete
+api/campaigns/count
+api/campaigns
+api/campaigns?count=25
+api/campaigns/{id}/validate
 
-  api/customers/nearby
-  api/customers/me/interests
+api/customers/nearby
+api/customers/me/interests
 
-  api/facebook/authorize
-  api/foursquare/checkin
-  api/foursquare/authorize
+api/facebook/authorize
+api/foursquare/checkin
+api/foursquare/authorize
 
-  api/trends/nearby
-  api/trends/mostpopular
+api/trends/nearby
+api/trends/mostpopular
