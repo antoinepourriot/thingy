@@ -34,9 +34,9 @@ angular
         templateUrl: 'views/campaigns.html',
         controller: 'campaignsCtrl'
       })
-      .when('/nvd3example', {
-        templateUrl: 'views/nvd3example.html',
-        controller: 'nvd3exampleCtrl'
+      .when('/validatecampaign', {
+        templateUrl: 'views/validatecampaign.html',
+        controller: 'campaignsCtrl'
       })
       .otherwise({
         redirectTo: '/'
