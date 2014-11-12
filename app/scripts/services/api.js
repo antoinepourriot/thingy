@@ -38,7 +38,11 @@ angular.module('thingie').factory('api', function($q, $http) {
       return apiCall(backend + '/api/customers/nearby', {
         method: 'GET'
       });
-
+    },
+    trends: function() {
+      return apiCall(backend + '/api/trends/nearby', {
+        method: 'GET'
+      });
     }
   };
 });
