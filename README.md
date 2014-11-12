@@ -1,4 +1,4 @@
-thingy
+﻿thingy
 ======
 
 ING’s 24H-CodeIT hackathon project
@@ -23,4 +23,6 @@ added sublimelinter + sublimelinter-jshint + esformatter
 search pattern in sublime: 
 ```
 <open folders>, -bower_components/*, -node_modules/*,
+
+Test  Alexey
 ```
