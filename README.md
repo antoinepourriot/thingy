@@ -23,6 +23,20 @@ added sublimelinter + sublimelinter-jshint + esformatter
 search pattern in sublime: 
 ```
 <open folders>, -bower_components/*, -node_modules/*,
-
-Test  Alexey
 ```
+  
+  api/campaigns/{id}/accept
+  api/campaigns/{id}/complete
+  api/campaigns/count
+  api/campaigns 
+  api/campaigns?count=25
+
+  api/customers/nearby
+  api/customers/me/interests
+
+  api/facebook/authorize
+  api/foursquare/checkin
+  api/foursquare/authorize
+
+  api/trends/nearby
+  api/trends/mostpopular
