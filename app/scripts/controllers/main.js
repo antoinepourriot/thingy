@@ -21,17 +21,16 @@ angular.module('thingie')
     };
 
     api.login(logindata).then(function() {
-      // need to wait for the login promise 
-      setTimeout(function() {
-        api.campaigns().then(function(data) {
-          console.log('campaigns' + data);
-        });
+      // need to wait for the login promise
+      api.campaigns().then(function(data) {
+        $scope.activecampaigns = data;
+        $scope.activecampaignscount = data.length;
+      });
 
-        api.customers().then(function(data) {
-          console.log('customers' + data);
-        });
-      }, 2000);
+      api.customers().then(function(data) {
+        $scope.nearbycustomers = data;
+      });
+
     });
-
 
   });
