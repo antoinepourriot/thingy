@@ -7,6 +7,9 @@ angular.module('thingie').factory('api', function($q, $http) {
     deferred = $q.defer();
     reject = deferred.reject;
     opts.url = url;
+    // Passing Credentials in Cross-Origin Requests
+    // http://www.asp.net/web-api/overview/security/enabling-cross-origin-requests-in-web-api
+    opts.withCredentials = true;
     resolve = function(result) {
       deferred.resolve(result.data);
     };
@@ -17,30 +20,25 @@ angular.module('thingie').factory('api', function($q, $http) {
     return deferred.promise;
   };
 
+  var backend = 'http://thingy-ing.azurewebsites.net';
+
   return {
-    login: {
-      postForm: function(data) {
-        return apiCall('/api/users/login', {
-          method: 'POST',
-          data: data
-        });
-      }
+    login: function(data) {
+      return apiCall(backend + '/api/users/login', {
+        method: 'POST',
+        data: data
+      });
     },
-    campaigns: {
-      postForm: function(data) {
-        return apiCall('/api/campaigns', {
-          method: 'GET',
-          data: data
-        });
-      }
+    campaigns: function() {
+      return apiCall(backend + '/api/campaigns', {
+        method: 'GET'
+      });
     },
-    customers: {
-      postForm: function(data) {
-        return apiCall('/api/customers/nearby', {
-          method: 'GET',
-          data: data
-        });
-      }
+    customers: function() {
+      return apiCall(backend + '/api/customers/nearby', {
+        method: 'GET'
+      });
+
     }
   };
 });
