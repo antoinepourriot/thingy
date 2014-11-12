@@ -1,0 +1,1 @@
+<LoginResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Thingy.Controllers"><CompanyName>Times Co.</CompanyName><FullName>Times Co.</FullName><Success>true</Success><UserName>hlegoz</UserName></LoginResult>

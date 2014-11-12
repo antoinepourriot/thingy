@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name thingyApp.controller:AboutCtrl
+ * @name thingie.controller:nvd3exampleCtrl
  * @description
  * # AboutCtrl
- * Controller of the thingyApp
+ * Controller of the thingie
  */
-angular.module('thingyApp')
-  .controller('nvd3example', function($scope) {
+angular.module('thingie')
+  .controller('nvd3exampleCtrl', function($scope) {
     $scope.exampleData = [
       {
         'key': 'Series 1',

@@ -2,31 +2,34 @@
 
 /**
  * @ngdoc overview
- * @name thingyApp
+ * @name thingie
  * @description
- * # thingyApp
+ * # thingie
  *
  * Main module of the application.
  */
 angular
-  .module('thingyApp', [
+  .module('thingie', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
+    'ngResource',
     'ngTouch',
+    'ui.bootstrap',
     'nvd3ChartDirectives'
     ])
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        //        controller: 'MainCtrl'
+        controller: 'loginCtrl'
       })
       .when('/nvd3example', {
         templateUrl: 'views/nvd3example.html',
-        controller: 'nvd3example'
+        controller: 'nvd3exampleCtrl'
       })
       .otherwise({
         redirectTo: '/'
