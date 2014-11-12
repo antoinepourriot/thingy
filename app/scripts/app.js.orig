@@ -36,7 +36,15 @@ angular
       })
       .when('/validatecampaign', {
         templateUrl: 'views/validatecampaign.html',
+<<<<<<< HEAD
         controller: 'campaignsCtrl'
+=======
+        controller: 'validateCtrl'
+      })
+      .when('/nvd3example', {
+        templateUrl: 'views/nvd3example.html',
+        controller: 'nvd3exampleCtrl'
+>>>>>>> 8a1d021a4925b1b3f2ed20cefbcd45e43940fa4a
       })
       .otherwise({
         redirectTo: '/'

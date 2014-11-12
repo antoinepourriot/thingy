@@ -339,6 +339,20 @@ module.exports = function(grunt) {
       }
     },
 
+    // upload to azure 
+    ftp: {
+      options: {
+        host: 'waws-prod-am2-017.ftp.azurewebsites.windows.net',
+        user: 'thingie\\$thingie',
+        pass: 'KjRvhj3PuGdYkBpGiuyoDmsxvpLdHFipu1xgeifs7fTaJqSuKlBwxFvjAEgn'
+      },
+      upload: {
+        files: {
+          'site/wwwroot': '<%= yeoman.dist %>/*'
+        }
+      }
+    },
+
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
