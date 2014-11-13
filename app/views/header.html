@@ -9,16 +9,13 @@
 </div>
 <div id="navbar" class="navbar-collapse collapse">
   <ul class="nav navbar-nav nav-pills">
-    <li ng-class="getClass('/campaigns')"><a ng-href="#/campaigns">Campaigns</a></li>
-    <li ng-class="getClass('/trendanalysis')"><a ng-href="#/trendanalysis">Trend analysis</a></li>
-    <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+    <li class="dropdown" ng-class="getClass('/campaigns')">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Campaigns <span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
+        <li><a href="#/campaigns">Campaigns</a></li>
+        <li><a href="#/validatecampaign">Activate code</a></li>
       </ul>
-    </li>
+    <li ng-class="getClass('/trendanalysis')"><a ng-href="#/trendanalysis">Trend analysis</a></li>
     <li><a ng-click="refresh()">Refresh data</a></li>
   </ul>
 </div><!--/.nav-collapse -->
