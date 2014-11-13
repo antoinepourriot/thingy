@@ -38,29 +38,13 @@ angular.module('thingie')
     });
 
 
-    $scope.sd = [
-      {
-        'Name': 'beats',
-        'Count': 1
-      }, {
-      'Name': 'creative',
-      'Count': 1
-      }, {
-      'Name': 'earphone',
-      'Count': 1
-      }, {
-      'Name': 'iphone',
-      'Count': 1
-      }, {
-      'Name': 'macbook',
-      'Count': 1
-    }];
     // function for the donut chart
     $scope.xFunction = function() {
       return function(d) {
         return d.Name;
       };
     };
+
     $scope.yFunction = function() {
       return function(d) {
         return d.Count;
