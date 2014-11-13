@@ -7,6 +7,7 @@
                                         <th>Id</th>
                                         <th>Campaign name</th>
                                         <th>Days Ago</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -16,6 +17,7 @@
 								            <td><a ng-href="#">{{i.Id}}</a></td>
 								            <td>{{i.Name}}</td>
 								            <td>{{i.DaysAgo}}</td>
+                                            <td><a ng-click="activatecode()" class="btn btn-warning btn-raised withripple">Delete campaign<div class="ripple-wrapper"></div></a></td>
 								        </tr>
 								    </tbody>
                                 </tbody>
@@ -43,7 +45,7 @@
             <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignecode"><span class="material-input"></span>
 
 <a ng-click="activatecode()" class="btn btn-warning btn-raised withripple">Change campaign<div class="ripple-wrapper"></div></a>
-<a ng-click="activatecode()" class="btn btn-warning btn-raised withripple">Delete campaign<div class="ripple-wrapper"></div></a>
+
             </div>
   </div>
 
