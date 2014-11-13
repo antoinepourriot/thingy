@@ -1,59 +1,39 @@
-<table class="table table-striped table-hover ">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Trend</th>
-                                        <th>Number of customers</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-								    <tbody ng:repeat="i in activecampaigns">
-								        <tr>
-								            <td>{{$index}}</td>
-								            <td>{{i.Id}}</td>
-								            <td>{{i.Name}}</td>
-								        </tr>
-								    </tbody>
-                                </tbody>
-                            </table>
+<svg width="500" height="300"><g transform="translate(150,150)"><text text-anchor="middle" transform="translate(-107,-4)rotate(90)" style="font-size: 74px; font-family: Impact; fill: rgb(31, 119, 180);">beats</text><text text-anchor="middle" transform="translate(79,56)rotate(0)" style="font-size: 53px; font-family: Impact; fill: rgb(174, 199, 232);">creative</text><text text-anchor="middle" transform="translate(173,-4)rotate(90)" style="font-size: 51px; font-family: Impact; fill: rgb(255, 127, 14);">earphone</text><text text-anchor="middle" transform="translate(43,-41)rotate(0)" style="font-size: 40px; font-family: Impact; fill: rgb(255, 187, 120);">macbook</text><text text-anchor="middle" transform="translate(4,0)rotate(0)" style="font-size: 38px; font-family: Impact; fill: rgb(44, 160, 44);">iphone</text></g></svg>
 
-    <div class="col-lg-4">
-                        <div class="bs-component">
-                            <div class="list-group">
-                                <div class="list-group-item">
-                                    <div class="row-action-primary">
-                                        <i class="mdi-file-folder"></i>
-                                    </div>
-                                    <div class="row-content">
-                                        <div class="least-content">15m</div>
-                                        <h4 class="list-group-item-heading">Tile with a label</h4>
-                                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
-                                    </div>
-                                </div>
-                                <div class="list-group-separator"></div>
-                                <div class="list-group-item">
-                                    <div class="row-action-primary">
-                                        <i class="mdi-social-mood"></i>
-                                    </div>
-                                    <div class="row-content">
-                                        <div class="least-content">10m</div>
-                                        <h4 class="list-group-item-heading">Tile with a label</h4>
-                                        <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
-                                    </div>
-                                </div>
-                                <div class="list-group-separator"></div>
-                                <div class="list-group-item">
-                                    <div class="row-action-primary">
-                                        <i class="mdi-file-folder"></i>
-                                    </div>
-                                    <div class="row-content">
-                                        <div class="least-content">8m</div>
-                                        <h4 class="list-group-item-heading">Tile with a label</h4>
-                                        <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
-                                    </div>
-                                </div>
-                                <div class="list-group-separator"></div>
-                            </div>
-                        <div id="source-button" class="btn btn-primary btn-xs" style="display: block;">&lt; &gt;</div></div>
-                    </div>
 
+<!--
+
+  var fill = d3.scale.category20();
+
+  d3.layout.cloud().size([500, 300])
+      .words([
+        "creative", "beats", "earphone", "iphone", "macbook"].map(function(d) {
+        return {text: d, size: 10 + Math.random() * 80};
+      }))
+      .rotate(function() { return ~~(Math.random() * 2) * 90; })
+      .font("Impact")
+      .fontSize(function(d) { return d.size; })
+      .on("end", draw)
+      .start();
+
+  function draw(words) {
+    d3.select("body").append("svg")
+        .attr("width", 500)
+        .attr("height", 300)
+      .append("g")
+        .attr("transform", "translate(150,150)")
+      .selectAll("text")
+        .data(words)
+      .enter().append("text")
+        .style("font-size", function(d) { return d.size + "px"; })
+        .style("font-family", "Impact")
+        .style("fill", function(d, i) { return fill(i); })
+        .attr("text-anchor", "middle")
+        .attr("transform", function(d) {
+          return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+        })
+        .text(function(d) { return d.text; });
+  }
+
+
+-->
