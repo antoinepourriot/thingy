@@ -37,7 +37,18 @@ angular.module('thingie').factory('api', function($q, $http) {
     campaignsvalidate: function(data, error) {
       return apiCall(backend + '/api/campaigns/validate', {
         method: 'POST',
-        data: data
+        data: data,
+        // post the value as a FORM  posthttp://www.bennadel.com/blog/2615-posting-form-data-with-http-in-angularjs.htm
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        transformRequest: function(obj) {
+          var str = [];
+          for (var p in obj) {
+            str.push(encodeURIComponent(p) + '=' + encodeURIComponent(obj[p]));
+          }
+          return str.join('&');
+        }
       },
 
         error()

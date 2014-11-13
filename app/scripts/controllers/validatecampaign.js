@@ -1,7 +1,7 @@
 angular.module('thingie').controller('validateCtrl', function($scope, api) {
   'use strict';
 
-
+  $scope.campaignecode = 'HQCUH8TD';
 
   $scope.activatecode = function() {
 
