@@ -10,14 +10,17 @@ angular.module('thingie').controller('campaignsCtrl', function($scope, api)
       });
 
 
+	 
+
+
 
      $scope.campaignData = [
         {
           'id': '1',
           'Name': 'Discount for laptops',
-          'Type' : 'Discount',
-          'MinAge' : '18',
-          'MaxAge' : '35',
+          'Type' : 'Bonus',
+          'MinAge' : '2',
+          'MaxAge' : '4',
           'Description' : '5% discount on laptops for girls 18-35',
           'BeginDate' : '10.11.2014',
           'EndDate' : '25.11.2014',
