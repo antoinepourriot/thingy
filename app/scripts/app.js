@@ -36,7 +36,7 @@ angular
       })
       .when('/validatecampaign', {
         templateUrl: 'views/validatecampaign.html',
-        controller: 'campaignsCtrl'
+        controller: 'validateCtrl'
       })
       .otherwise({
         redirectTo: '/'
