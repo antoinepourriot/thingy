@@ -6,34 +6,75 @@ angular.module('thingie').controller('campaignsCtrl', function($scope, api) {
     $scope.activecampaignscount = data.length;
   });
 
+  $scope.addCampaign = function() {
+    $scope.activecampaignscount++;
+    $scope.addingacampaigne = true;
+    $scope.activecampaigns.push(
+      {
+        'Id': $scope.activecampaignscount,
+        'Name': '',
+        'DaysAgo': 0
+      }
+    );
 
 
-  $scope.number = 50;
-  $scope.getNumber = function(num) {
-    return new Array(num);
   };
 
-  $scope.getcampdetails = function(id) {
-    console.log(id);
-    api.campaigndetails(id).then(function(data) {
-      $scope.campaigndetails = data;
-    });
-  };
 
-  $scope.campaignData = [
-    {
-      'id': '1',
-      'Name': 'Discount for laptops',
-      'Type': 'Bonus',
-      'MinAge': '18',
-      'MaxAge': '35',
-      'Description': '5% discount on laptops for girls 18-35',
-      'BeginDate': '10.11.2014',
-      'EndDate': '25.11.2014',
-      'Interests': 'Laptop, playbook, vaio',
-      'Gender': 'Male'
+  $scope.getcampdetails = function(camp) {
+
+    if (camp.Name !== '' && !$scope.addingacampaigne) {
+      api.campaigndetails(camp.Id).then(function(data) {
+        $scope.campaigndetails = data;
+        $scope.addingacampaigne = false;
+      });
+    } else {
+      $scope.campaigndetails = {
+        'Id': '',
+        'Name': '',
+        'DaysAgo': 0
+      };
     }
-  ];
+  };
+
+  $scope.editcampaign = function(campaigndetails) {
+    var opts = {
+      'Name': $scope.campaigndetails.Name,
+      'BeginDate': $scope.campaigndetails.BeginDate,
+      'EndDate': $scope.campaigndetails.EndDate,
+      'Interests': $scope.campaigndetails.Interests
+    };
+    console.log(campaigndetails.Name);
+    console.log('opts');
+
+    if (!$scope.addingacampaigne) {
+      api.editcampaign(campaigndetails.Id, opts).then(function(data) {
+        $scope.campaigndetails = data;
+      });
+    } else {
+      $scope.campaigndetails.BeginDate = '2014-11-01T00:00:00';
+      $scope.campaigndetails.EndDate = '2014-12-01T00:00:00';
+      api.addcampaign(campaigndetails).then(function(data) {
+        console.log(data);
+      });
+    }
+
+
+  };
+
+  /*
+  UpdatableCampaignDetailedInfo {
+    Name (string, optional),
+    BeginDate (string, optional),
+    EndDate (string, optional),
+    Type (string, optional),
+    MinAge (integer, optional),
+    MaxAge (integer, optional),
+    Description (string, optional),
+    Gender (string, optional),
+    Interests (string, optional)
+  }
+  */
 
 
 

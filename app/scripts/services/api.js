@@ -58,6 +58,18 @@ angular.module('thingie').factory('api', function($q, $http) {
         method: 'GET'
       });
     },
+    editcampaign: function(id, data) {
+      return apiCall(backend + '/api/campaigns/' + id, {
+        method: 'PUT',
+        data: data
+      });
+    },
+    addcampaign: function(data) {
+      return apiCall(backend + '/api/campaigns', {
+        method: 'POST',
+        data: data
+      });
+    },
     customers: function() {
       return apiCall(backend + '/api/customers/nearby', {
         method: 'GET'

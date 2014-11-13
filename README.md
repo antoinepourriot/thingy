@@ -4,6 +4,7 @@
 ING’s 24H-CodeIT hackathon project
 
 http://thingy-ing.azurewebsites.net
+http://thingy-ing.azurewebsites.net/swagger/ui/index.html
 
 - scaffolded project with http://yeoman.io/codelab/setup.html
 

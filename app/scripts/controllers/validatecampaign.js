@@ -21,7 +21,6 @@ angular.module('thingie').controller('validateCtrl', function($scope, api) {
       ];
 
     }).then(function(data) {
-      console.log('toto');
       $scope.validation = [
         {
           'isValidated': 'true',

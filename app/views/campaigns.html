@@ -1,4 +1,3 @@
- <a ng-href="#/newcampaign" class="btn btn-warning btn-raised withripple">Create new campaign<div class="ripple-wrapper"></div></a>
 
  <table class="table table-striped table-hover " >
     <thead>
@@ -6,7 +5,7 @@
             <th>#</th>
             <th>Id</th>
             <th>Campaign name</th>
-            <th>End Date</th>
+            <th>Days ago</th>
             <th></th>
         </tr>
     </thead>
@@ -15,16 +14,20 @@
 	        <tr>
 	            <td>{{$index}}</td>
 	            <td>{{i.Id}}</td>
-	            <td ng-click="getcampdetails(i.Id)">{{i.Name}}</td>
+	            <td ng-click="getcampdetails(i)">{{i.Name}}</td>
 	            <td>{{i.DaysAgo}}</td>
-                <td><a ng-click="activatecode()" class="btn btn-warning btn-raised withripple">Delete campaign<div class="ripple-wrapper"></div></a></td>
+                <td><a class="btn btn-warning btn-raised withripple">delete<div class="ripple-wrapper"></div></a></td>
 	        </tr>
 	    </tbody>
     </tbody>
 </table>
+ <a class="btn btn-warning btn-raised withripple" ng-click="addCampaign()">add campaign {{activecampaignscount}}<div class="ripple-wrapper"></div></a>
 
- 
- <div class="form-group has-warning" >
+  
+
+<a ng-click="editcampaign(campaigndetails)" class="btn btn-warning btn-raised withripple">Change campaign<div class="ripple-wrapper"></div></a>
+
+ <div class="form-group has-warning" ng-hide="campaigndetails.Name == null">
             <label class="control-label" for="inputWarning">Name</label>
             <div class="form-control-wrapper"><input type="text" class="form-control empty" ng-model="campaigndetails.Name"><span class="material-input"></span>
 
@@ -260,9 +263,6 @@
 
 
 
- 
-
-<a ng-click="activatecode()" class="btn btn-warning btn-raised withripple">Change campaign<div class="ripple-wrapper"></div></a>
 
             </div>
   </div>
