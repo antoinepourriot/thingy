@@ -36,7 +36,7 @@ angular
       })
        .when('/newcampaign', {
         templateUrl: 'views/newcampaign.html',
-        controller: 'newcampaignCtrl'
+        controller: 'newCampaignCtrl'
       })
       .when('/validatecampaign', {
         templateUrl: 'views/validatecampaign.html',
