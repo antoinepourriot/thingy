@@ -6,7 +6,7 @@
                                         <th>#</th>
                                         <th>Id</th>
                                         <th>Campaign name</th>
-                                        <th>Days Ago</th>
+                                        <th>End Date</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -14,8 +14,8 @@
 								    <tbody ng:repeat="i in activecampaigns">
 								        <tr>
 								            <td>{{$index}}</td>
-								            <td><a ng-href="#">{{i.Id}}</a></td>
-								            <td>{{i.Name}}</td>
+								            <td>{{i.Id}}</td>
+								            <td><a ng-href="#/campaigns">{{i.Name}}</a></td>
 								            <td>{{i.DaysAgo}}</td>
                                             <td><a ng-click="activatecode()" class="btn btn-warning btn-raised withripple">Delete campaign<div class="ripple-wrapper"></div></a></td>
 								        </tr>
@@ -26,23 +26,73 @@
 
  
  <div class="form-group has-warning" >
-              <label class="control-label" for="inputWarning">Please enter your code below</label>
+            <label class="control-label" for="inputWarning">Name</label>
+            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignData[0].Name"><span class="material-input"></span>
+
+           <label class="control-label" for="inputWarning">Type</label>
+ <div class="form-control-wrapper"><select class="form-control" id="select">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select><span class="material-input"></span></div>
+
+            <label class="control-label" for="inputWarning">MinAge</label>
+            <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                                        Dropdown <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0)">Action</a></li>
+                                        <li><a href="javascript:void(0)">Another action</a></li>
+                                        <li><a href="javascript:void(0)">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="javascript:void(0)">Separated link</a></li>
+                                    </ul>
+                                </li>
+
+            <label class="control-label" for="inputWarning">MaxAge</label>
+            <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                                        Dropdown <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0)">Action</a></li>
+                                        <li><a href="javascript:void(0)">Another action</a></li>
+                                        <li><a href="javascript:void(0)">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="javascript:void(0)">Separated link</a></li>
+                                    </ul>
+                                </li>
+
+            <label class="control-label" for="inputWarning">Gender</label>
+            <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                                        Dropdown <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0)">Action</a></li>
+                                        <li><a href="javascript:void(0)">Another action</a></li>
+                                        <li><a href="javascript:void(0)">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="javascript:void(0)">Separated link</a></li>
+                                    </ul>
+                                </li>
+
+            <label class="control-label" for="inputWarning">Description</label>
             <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignecode"><span class="material-input"></span>
 
-           <label class="control-label" for="inputWarning">Please enter your code below</label>
+            <label class="control-label" for="inputWarning">BeginDate</label>
             <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignecode"><span class="material-input"></span>
 
-            <label class="control-label" for="inputWarning">Please enter your code below</label>
+            <label class="control-label" for="inputWarning">EndDate</label>
             <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignecode"><span class="material-input"></span>
 
-            <label class="control-label" for="inputWarning">Please enter your code below</label>
+            <label class="control-label" for="inputWarning">Interests</label>
             <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignecode"><span class="material-input"></span>
 
-            <label class="control-label" for="inputWarning">Please enter your code below</label>
-            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignecode"><span class="material-input"></span>
-
-            <label class="control-label" for="inputWarning">Please enter your code below</label>
-            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignecode"><span class="material-input"></span>
+ 
 
 <a ng-click="activatecode()" class="btn btn-warning btn-raised withripple">Change campaign<div class="ripple-wrapper"></div></a>
 
