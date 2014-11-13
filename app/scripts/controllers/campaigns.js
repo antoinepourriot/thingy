@@ -9,4 +9,5 @@ angular.module('thingie').controller('campaignsCtrl', function($scope, api)
         $scope.activecampaignscount = data.length;
       });
 
+
 });
