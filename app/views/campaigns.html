@@ -1,32 +1,41 @@
  <a ng-href="#/newcampaign" class="btn btn-warning btn-raised withripple">Create new campaign<div class="ripple-wrapper"></div></a>
 
  <table class="table table-striped table-hover " >
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Id</th>
-                                        <th>Campaign name</th>
-                                        <th>End Date</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-								    <tbody ng:repeat="i in activecampaigns">
-								        <tr>
-								            <td>{{$index}}</td>
-								            <td>{{i.Id}}</td>
-								            <td ng-click="campaigndetails(i)">{{i.Name}}</td>
-								            <td>{{i.DaysAgo}}</td>
-                                            <td><a ng-click="activatecode()" class="btn btn-warning btn-raised withripple">Delete campaign<div class="ripple-wrapper"></div></a></td>
-								        </tr>
-								    </tbody>
-                                </tbody>
-                            </table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Id</th>
+            <th>Campaign name</th>
+            <th>End Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+	    <tbody ng:repeat="i in activecampaigns">
+	        <tr>
+	            <td>{{$index}}</td>
+	            <td>{{i.Id}}</td>
+	            <td ng-click="getcampdetails(i.Id)">{{i.Name}}</td>
+	            <td>{{i.DaysAgo}}</td>
+                <td><a ng-click="activatecode()" class="btn btn-warning btn-raised withripple">Delete campaign<div class="ripple-wrapper"></div></a></td>
+	        </tr>
+	    </tbody>
+    </tbody>
+</table>
 
  
  <div class="form-group has-warning" >
             <label class="control-label" for="inputWarning">Name</label>
-            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaigndetails.Name"><span class="material-input"></span>
+            <div class="form-control-wrapper"><input type="text" class="form-control empty" ng-model="campaigndetails.Name"><span class="material-input"></span>
+
+            <label class="control-label" for="inputWarning">BeginDate</label>
+            <div class="form-control-wrapper"><input type="text" class="form-control empty" ng-model="campaigndetails.BeginDate"><span class="material-input"></span>
+
+            <label class="control-label" for="inputWarning">EndDate</label>
+            <div class="form-control-wrapper"><input type="text" class="form-control empty" ng-model="campaigndetails.EndDate"><span class="material-input"></span>
+
+            <label class="control-label" for="inputWarning">Interests</label>
+            <div class="form-control-wrapper"><input type="text" class="form-control empty" ng-model="campaigndetails.Interests"><span class="material-input"></span> 
 
            <label class="control-label" for="inputWarning">Type</label>
               <div class="form-control-wrapper"><select class="form-control" id="select" ng-model="campaigndetails.Type">
@@ -247,16 +256,9 @@
                                             </select><span class="material-input"></span></div>
 
             <label class="control-label" for="inputWarning">Description</label>
-            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaigndetails.Description"><span class="material-input"></span>
+            <div class="form-control-wrapper"><input type="text" class="form-control empty" ng-model="campaigndetails.Description"><span class="material-input"></span>
 
-            <label class="control-label" for="inputWarning">BeginDate</label>
-            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaigndetails.BeginDate"><span class="material-input"></span>
 
-            <label class="control-label" for="inputWarning">EndDate</label>
-            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaigndetails.EndDate"><span class="material-input"></span>
-
-            <label class="control-label" for="inputWarning">Interests</label>
-            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaigndetails.Interests"><span class="material-input"></span>
 
  
 

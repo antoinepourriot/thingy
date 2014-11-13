@@ -13,8 +13,9 @@ angular.module('thingie').controller('campaignsCtrl', function($scope, api) {
     return new Array(num);
   };
 
-  $scope.campaigndetails = function(campaign) {
-    api.campaigndetails(campaign.Id).then(function(data) {
+  $scope.getcampdetails = function(id) {
+    console.log(id);
+    api.campaigndetails(id).then(function(data) {
       $scope.campaigndetails = data;
     });
   };
