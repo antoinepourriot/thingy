@@ -34,6 +34,10 @@ angular
         templateUrl: 'views/campaigns.html',
         controller: 'campaignsCtrl'
       })
+       .when('/newcampaign', {
+        templateUrl: 'views/newcampaign.html',
+        controller: 'newcampaignCtrl'
+      })
       .when('/validatecampaign', {
         templateUrl: 'views/validatecampaign.html',
         controller: 'validateCtrl'
