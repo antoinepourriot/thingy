@@ -34,6 +34,15 @@ angular.module('thingie').factory('api', function($q, $http) {
         method: 'GET'
       });
     },
+    campaignsvalidate: function(data, error) {
+      return apiCall(backend + '/api/campaigns/validate', {
+        method: 'POST',
+        data: data
+      },
+
+        error()
+      );
+    },
     customers: function() {
       return apiCall(backend + '/api/customers/nearby', {
         method: 'GET'

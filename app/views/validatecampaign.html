@@ -1,33 +1,37 @@
-<div class="col-md-6">
+<div class="col-md-12">
+
 
 <h1>{{validation[0].isValidated}}</h1>
 
 
+
   <div class="form-group has-warning" >
-                                  <label class="control-label" for="inputWarning">Please enter your code below</label>
-                                <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning"><span class="material-input"></span></div>
-                            </div>
- 
- <div ng-switch="validation[0].isValidated">
-       <div class="col-lg-4" ng-switch-when="true">
-                        <div class="bs-component">
-                            <div class="alert alert-dismissable alert-success">
-                                <button type="button" class="close" data-dismiss="alert">×</button>
-                                <strong>Campaign is vaidated</strong> 
-                            </div>
-                        </div>
-       </div>
+              <label class="control-label" for="inputWarning">Please enter your code below</label>
+            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignecode"><span class="material-input"></span>
+<a ng-click="activatecode()" class="btn btn-warning btn-raised withripple">activate<div class="ripple-wrapper"></div></a>
+            </div>
+        </div>
+
+<div ng-switch="validation[0].isValidated">
+<div class="col-lg-4" ng-switch-when="true">
+    <div class="bs-component">
+        <div class="alert alert-dismissable alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Campaign is validated</strong> 
+        </div>
+    </div>
+</div>
 
 
-      <div class="col-lg-4" ng-switch-when="false">
-                    <div class="bs-component" ng-hide="$scope.validation[0].isValidated">
-                            <div class="alert alert-dismissable alert-danger">
-                                <h4>Error</h4>
-                                <button type="button" class="close" data-dismiss="alert">×</button>
-                                <strong>Campaign is NOT vaidated</strong>
-                            </div>
-                    </div>
-      </div>
+<div class="col-lg-4" ng-switch-when="false">
+<div class="bs-component" ng-hide="$scope.validation[0].isValidated">
+        <div class="alert alert-dismissable alert-danger">
+            <h4>Error</h4>
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Campaign is NOT vaidated</strong>
+        </div>
+</div>
+</div>
 
 </div>
 
