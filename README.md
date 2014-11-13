@@ -9,22 +9,26 @@ http://thingy-ing.azurewebsites.net
 
 - bower installed : https://github.com/cmaurer/angularjs-nvd3-directives
 
+install first nodejs
 
 ```
-npm install -g jshint yo grunt bower
-yo angular
-bower install d3 --save
-bower install nvd3 --save
-bower install angularjs-nvd3-directives --save
+npm install -g jshint grunt grunt-cli bower
+npm install && bower install
 ```
+then :
 
+```
+grunt serve // to run de website locally
+grunt build // to package the website an ftp it to http://thingie.azurewebsites.net
+```
+install sublimetext.. or not
 added sublimelinter + sublimelinter-jshint + esformatter
 
 search pattern in sublime: 
 ```
 <open folders>, -bower_components/*, -node_modules/*,
 ```
-  
+
 api/campaigns/{id}/accept
 api/campaigns/{id}/complete
 api/campaigns/count
