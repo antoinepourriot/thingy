@@ -340,16 +340,16 @@ module.exports = function(grunt) {
     },
 
     // upload to azure 
-    ftp: {
-      options: {
-        host: 'waws-prod-am2-017.ftp.azurewebsites.windows.net',
-        user: 'thingie\\$thingie',
-        pass: 'KjRvhj3PuGdYkBpGiuyoDmsxvpLdHFipu1xgeifs7fTaJqSuKlBwxFvjAEgn'
-      },
-      upload: {
-        files: {
-          'site/wwwroot': '<%= yeoman.dist %>/*'
-        }
+    'ftp-deploy': {
+      build: {
+        auth: {
+          host: 'waws-prod-am2-017.ftp.azurewebsites.windows.net',
+          port: 21,
+          authKey: 'thingie'
+        },
+        src: '<%= yeoman.dist %>',
+        dest: 'site/wwwroot',
+        exclusions: ['path/to/source/folder/**/.DS_Store', 'path/to/source/folder/**/Thumbs.db', 'path/to/dist/tmp']
       }
     },
 
@@ -420,7 +420,8 @@ module.exports = function(grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'ftp-deploy'
   ]);
 
   grunt.registerTask('default', [
