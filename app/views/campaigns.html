@@ -15,7 +15,7 @@
 								        <tr>
 								            <td>{{$index}}</td>
 								            <td>{{i.Id}}</td>
-								            <td><a ng-href="#/campaigns">{{i.Name}}</a></td>
+								            <td ng-click="campaigndetails(i)">{{i.Name}}</td>
 								            <td>{{i.DaysAgo}}</td>
                                             <td><a ng-click="activatecode()" class="btn btn-warning btn-raised withripple">Delete campaign<div class="ripple-wrapper"></div></a></td>
 								        </tr>
@@ -23,20 +23,19 @@
                                 </tbody>
                             </table>
 
-
  
  <div class="form-group has-warning" >
             <label class="control-label" for="inputWarning">Name</label>
-            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignData[0].Name"><span class="material-input"></span>
+            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaigndetails.Name"><span class="material-input"></span>
 
            <label class="control-label" for="inputWarning">Type</label>
-              <div class="form-control-wrapper"><select class="form-control" id="select" ng-model="campaignData[0].Type">
+              <div class="form-control-wrapper"><select class="form-control" id="select" ng-model="campaigndetails.Type">
                                                 <option>Discount</option>
                                                 <option>Bonus</option>
                                             </select><span class="material-input"></span></div>
 
             <label class="control-label" for="inputWarning">MinAge</label>
-             <div class="form-control-wrapper"><select class="form-control" id="select" ng-model="campaignData[0].MinAge">
+             <div class="form-control-wrapper"><select class="form-control" id="select" ng-model="campaigndetails.MinAge">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -139,7 +138,7 @@
                                             </select><span class="material-input"></span></div>
 
             <label class="control-label" for="inputWarning">MaxAge</label>
-             <div class="form-control-wrapper"><select class="form-control" id="select" ng-model="campaignData[0].MaxAge">
+             <div class="form-control-wrapper"><select class="form-control" id="select" ng-model="campaigndetails.MaxAge">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -242,22 +241,22 @@
                                             </select><span class="material-input"></span></div>
 
             <label class="control-label" for="inputWarning">Gender</label>
-             <div class="form-control-wrapper"><select class="form-control" id="select" ng-model="campaignData[0].Gender">
+             <div class="form-control-wrapper"><select class="form-control" id="select" ng-model="campaigndetails.Gender">
                                                 <option>Male</option>
                                                 <option>Female</option>
                                             </select><span class="material-input"></span></div>
 
             <label class="control-label" for="inputWarning">Description</label>
-            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignData[0].Description"><span class="material-input"></span>
+            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaigndetails.Description"><span class="material-input"></span>
 
             <label class="control-label" for="inputWarning">BeginDate</label>
-            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignData[0].BeginDate"><span class="material-input"></span>
+            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaigndetails.BeginDate"><span class="material-input"></span>
 
             <label class="control-label" for="inputWarning">EndDate</label>
-            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignData[0].EndDate"><span class="material-input"></span>
+            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaigndetails.EndDate"><span class="material-input"></span>
 
             <label class="control-label" for="inputWarning">Interests</label>
-            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaignData[0].Interests"><span class="material-input"></span>
+            <div class="form-control-wrapper"><input type="text" class="form-control empty" id="inputWarning" ng-model="campaigndetails.Interests"><span class="material-input"></span>
 
  
 

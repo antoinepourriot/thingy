@@ -50,9 +50,13 @@ angular.module('thingie').factory('api', function($q, $http) {
           return str.join('&');
         }
       },
-
         error()
       );
+    },
+    campaigndetails: function(id) {
+      return apiCall(backend + '/api/campaigns/' + id, {
+        method: 'GET'
+      });
     },
     customers: function() {
       return apiCall(backend + '/api/customers/nearby', {
